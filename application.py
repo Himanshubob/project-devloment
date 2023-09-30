@@ -3,7 +3,8 @@ from flask import Flask,request,jsonify,render_template
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-app = Flask(__name__)
+application = Flask(__name__)
+app=application
 ridge_model=pickle.load(open('model/redige.pkl','rb'))
 standard_scaler=pickle.load(open('model/scaler.pkl','rb'))
 @app.route('/')
